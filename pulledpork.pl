@@ -1827,7 +1827,7 @@ if ( @base_url && -d $temp_path ) {
 		if ($Snort =~ /(?<=\d\.\d\.\d)\.\d/) {
 		    my $Snortv = $Snort;
 		    $Snortv =~ s/(?<=\d\.\d\.\d)\.\d//;
-		    $base_url .= "$oinkcode/snort-$Snortv/";
+            $base_url .= "$oinkcode/$Config_info{'engine'}-$Snortv/";
 		} elsif ($Snort =~ /suricata/i) {
 		    $base_url .= "$oinkcode/$Snort/";
 		}
